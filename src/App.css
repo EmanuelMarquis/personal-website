@@ -15,6 +15,10 @@
     display: inline-block;
 }
 
+.floating-window-shadow {
+    background-color: #251C28 ;
+}
+
 .main-color {
     background-color: #AF41E2;
 }

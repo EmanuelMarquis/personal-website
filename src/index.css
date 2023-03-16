@@ -11,14 +11,6 @@ body {
     border-color: red;
 }
 
-div {
-    border-color: #251C28;
-}
-
-nav {
-    border-color: #251C28;
-}
-
-input {
+div, nav, input {
     border-color: #251C28;
 }
