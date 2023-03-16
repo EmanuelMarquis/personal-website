@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
+
+body {
+    background-color: #FDF7FF;
+    color:  #251C28;
+    font-family: 'Roboto Mono';
+    border-color: red;
+}
+
+div {
+    border-color: #251C28;
+}
+
+nav {
+    border-color: #251C28;
+}
+
+input {
+    border-color: #251C28;
+}
