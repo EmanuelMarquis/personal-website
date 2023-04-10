@@ -14,3 +14,9 @@ body {
 div, nav, input {
     border-color: #251C28;
 }
+
+@media (max-width: 425px) {
+    :root {
+        font-size: 10px;
+    }
+}
