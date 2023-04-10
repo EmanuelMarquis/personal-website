@@ -11,9 +11,7 @@ export default function FloatingWindow({msg}) {
                 <span className="floating-window-dot"/>
                 <span className="floating-window-dot"/>
             </div>
-            <div className="pt-8 pb-6 px-6">
-                {msg}
-            </div>
+            <div className="pt-8 pb-6 px-6">{msg}</div>
         </div>
     </div>);
 }
