@@ -13,6 +13,22 @@ export default function App() {
     frontend developer.
   </Fragment>;
 
+  const techStack = <Fragment>
+    - ReactJS<br/>
+    - TailwindCSS<br/>
+    - Javascript<br/>
+    - Html<br/>
+    - Css<br/>
+  </Fragment>
+
+  const familiarWith = <Fragment>
+    - NodeJS<br/>
+    - Firebase<br/>
+    - Git& Github<br/>
+    - Dart<br/>
+    <br/>
+  </Fragment>
+
   return (<div>
     <Navbar/>
     <p className='font-bold text-center text-6xl mt-64 mb-56'>
@@ -21,12 +37,14 @@ export default function App() {
     </p>
     <CheckeredStripe/>
     <span className='relative z-0 px-2 flex justify-end' style={{top: "-24rem"}}>
-      <FloatingWindow msg={aboutMe}/>
+      <FloatingWindow msg={aboutMe} isPosAbsolute={true}/>
     </span>
-    {/* <div>
-      <FloatingWindow msg={""}/>
-      <FloatingWindow msg={""}/>
-      <FloatingWindow msg={""}/>
-    </div> */}
+    <div className='pb-32'>
+      <p className='text-start ml-6 mb-16 mt-24 font-bold text-6xl'>My Skill Set:</p>
+      <div className='flex gap-10 pl-24'>
+        <FloatingWindow title={"Tech Stack"} msg={techStack}/>
+        <FloatingWindow title={"Familiar With"} msg={familiarWith}/>
+      </div>
+    </div>
   </div>);
 }
