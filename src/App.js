@@ -26,7 +26,7 @@ export default function App() {
     - Firebase<br/>
     - Git& Github<br/>
     - Dart<br/>
-    <br/>
+    - Flutter<br/>
   </Fragment>
 
   return (<div>
