@@ -11,7 +11,7 @@ body {
     border-color: red;
 }
 
-div, nav, input {
+div, nav, button, input {
     border-color: #251C28;
 }
 
