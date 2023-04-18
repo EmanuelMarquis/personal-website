@@ -1,4 +1,5 @@
 import FloatingWindow from "../components/floatingWindow";
+import Navbar from "../components/navbar";
 
 export default function Contact() {
     const msgs = [
@@ -11,9 +12,10 @@ export default function Contact() {
     ];
 
     return <div>
-        <span className="flex gap-16">
-            <FloatingWindow msg={msgs[0]} haveTitleBar={false} width={"24rem"}/>
-            <FloatingWindow msg={msgs[1]} haveTitleBar={false} width={"24rem"}/>
+        <Navbar/>
+        <span className="flex gap-16 mt-32 ml-8">
+            <FloatingWindow header={"2023/ Weather App"} msg={msgs[0]} haveTitleBar={false} width={"24rem"}/>
+            <FloatingWindow header={"2023/ Todo-List"} msg={msgs[1]} haveTitleBar={false} width={"24rem"}/>
             {/* <FloatingWindow msg={msgs[2]}/> */}
         </span>
     </div>;
