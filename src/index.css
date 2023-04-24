@@ -1,8 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
 
 body {
     background-color: #FDF7FF;

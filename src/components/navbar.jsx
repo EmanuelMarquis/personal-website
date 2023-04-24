@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
     const navigate = useNavigate();
@@ -13,8 +14,8 @@ export default function Navbar() {
 }
 
 function LogoBtn() {
-    const logo = <img alt="" width={"82rem"} src={require("../assets/logo.png")}/>
-    return <button className="border-r-4 border-color px-6 navbar-btn" onClick={() => window.location.reload()}>{logo}</button>
+    const img = <img alt="" width={"82rem"} src={logo}/>
+    return <button className="border-r-4 border-color px-6 navbar-btn" onClick={() => window.location.reload()}>{img}</button>
 }
 
 function PortifolioBtn({navigate}) {
