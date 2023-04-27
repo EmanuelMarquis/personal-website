@@ -1,22 +1,16 @@
-import FloatingWindow from "../components/floatingWindow";
 import Navbar from "../components/navbar";
 
 export default function Contact() {
-    const msgs = [
-        `REST API study with 
-        React.js and open 
-        weather api.`,
-        `Frontend dev study 
-        with plain HTML, CSS 
-        and JS.`
-    ];
-
-    return <div>
+    return <>
         <Navbar/>
-        <span className="flex gap-16 mt-32 ml-8">
-            <FloatingWindow header={"2023/ Weather App"} msg={msgs[0]} haveTitleBar={false} width={"24rem"}/>
-            <FloatingWindow header={"2023/ Todo-List"} msg={msgs[1]} haveTitleBar={false} width={"24rem"}/>
-            {/* <FloatingWindow msg={msgs[2]}/> */}
-        </span>
-    </div>;
+        <p className="text-6xl font-bold mt-32 ml-24">How can i help? Tell me<br/>your ideas.</p>
+        <div className="flex gap-4 ml-24 mt-12">
+            <a href="mailto:emanuelmarquisdev@gmail.com">
+            <input className="green px-8 py-4 border-4 text-3xl" type="button" value={"Email"}/>
+            </a>
+            <a href="https://linkedin.com/in/emanuelmarquis" target="_blank">
+            <input className="green px-8 py-4 border-4 text-3xl" type="button" value={"Linkedin"}/>
+            </a>
+        </div>
+    </>;
 }

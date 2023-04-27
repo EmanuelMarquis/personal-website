@@ -11,6 +11,10 @@ body {
     border-color: red;
 }
 
+input {
+    cursor: pointer !important;
+}
+
 div, nav, button, input {
     border-color: #251C28;
 }
