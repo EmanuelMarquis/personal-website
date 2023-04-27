@@ -8,11 +8,16 @@ import {
   RouterProvider
 } from 'react-router-dom';
 import Contact from "./routes/contact";
+import Portifolio from './routes/portifolio';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />
+  },
+  {
+    path: "/portfolio",
+    element: <Portifolio/>
   },
   {
     path: "/contact",
