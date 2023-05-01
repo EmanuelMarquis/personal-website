@@ -15,7 +15,7 @@ input {
     cursor: pointer !important;
 }
 
-div, nav, button, input {
+div, nav, button, input, a {
     border-color: #251C28;
 }
 
