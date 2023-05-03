@@ -7,9 +7,9 @@ import CheckeredStripe from './components/checkeredStripe';
 export default function App() {
 
   const aboutMe = <Fragment>
-    I'm a 18 year-old lad from the<br/>
-    northeast of Brazil, looking for<br/>
-    cool job opportunities as a<br/> 
+    I'm a 18 year-old lad from the
+    northeast of Brazil, looking for
+    cool job opportunities as a
     frontend developer.
   </Fragment>;
 
@@ -36,12 +36,12 @@ export default function App() {
       a Frontend Developer.
     </p>
     <CheckeredStripe/>
-    <span className='relative z-0 px-2 flex justify-end' style={{top: "-24rem"}}>
+    <span id='aboutMe' className='relative z-0 px-2 flex justify-end' style={{top: "-24rem"}}>
       <FloatingWindow msg={aboutMe} isPosAbsolute={true}/>
     </span>
     <div className='pb-32'>
       <p className='text-start ml-6 mb-16 mt-24 font-bold text-6xl'>My Skill Set:</p>
-      <div className='flex gap-10 pl-24'>
+      <div id="skillset" className='flex gap-10 pl-24'>
         <FloatingWindow title={"Tech Stack"} msg={techStack}/>
         <FloatingWindow title={"Familiar With"} msg={familiarWith}/>
       </div>

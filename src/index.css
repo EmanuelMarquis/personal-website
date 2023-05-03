@@ -4,6 +4,40 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (max-width: 425px) {
+    :root {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    #portfolio-list, #skillset {
+        display: grid;
+    }
+
+    #checkeredSprite {
+        display: none;
+    }
+
+    #aboutMe {
+        position: static;
+    }
+
+    #aboutMe div {
+        position: static;
+    }
+
+    #navbarBtns {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    #menu {
+        display: none;
+    }
+}
+
 body {
     background-color: #FDF7FF;
     color:  #251C28;
@@ -17,10 +51,4 @@ input {
 
 div, nav, button, input, a {
     border-color: #251C28;
-}
-
-@media (max-width: 425px) {
-    :root {
-        font-size: 10px;
-    }
 }

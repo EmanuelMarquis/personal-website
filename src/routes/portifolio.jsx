@@ -13,15 +13,15 @@ export default function Portifolio() {
 
     return <>
         <Navbar/>
-        <span className="flex gap-16 mt-32 ml-8">
+        <div id="portfolio-list" className="flex gap-16 mt-48 ml-24">
             <a href="https://github.com/emanuelmarquis/weather-app">
-            <FloatingWindow header={"2023/ Weather App"} msg={msgs[0]} haveTitleBar={false} width={"24rem"}/>
+            <FloatingWindow header={"2023/ Weather App"} msg={msgs[0]} haveTitleBar={false} isPortfolio={true}/>
             </a>
             
             <a href="https://github.com/emanuelmarquis/todo-list">
-            <FloatingWindow header={"2023/ Todo-List"} msg={msgs[1]} haveTitleBar={false} width={"24rem"}/>
+            <FloatingWindow header={"2023/ Todo-List"} msg={msgs[1]} haveTitleBar={false} isPortfolio={true}/>
             </a>
             {/* <FloatingWindow msg={msgs[2]}/> */}
-        </span>
+        </div>
     </>;
 }

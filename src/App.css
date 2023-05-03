@@ -8,8 +8,8 @@
 }
 
 .floating-window-dot {
-    width: 24px;
-    height: 24px;
+    width: 2rem;
+    height: 2rem;
     background-color: #251C28;
     border-radius: 50%;
     display: inline-block;

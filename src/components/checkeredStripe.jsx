@@ -1,6 +1,6 @@
 
-export default function CheckeredStripe({child}) {
-    return (<div className="z-0">
+export default function CheckeredStripe() {
+    return (<div id="checkeredSprite" className="z-0">
         <div className="flex">
             <Square option="blank"/>
             <Square option="filled"/>
