@@ -3,6 +3,7 @@
 # files
 *.jpg
 *.env
+*.drawio
 
 # dependencies
 /node_modules
