@@ -1,0 +1,34 @@
+package dev.emanuelmarquis;
+
+import io.javalin.Javalin;
+import io.javalin.http.Context;
+import io.javalin.http.staticfiles.Location;
+import org.jetbrains.annotations.NotNull;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+
+public class Server {
+    public static void main(String[] args) {
+        final var app = Javalin.create(config -> {
+            config.staticFiles.add("./public", Location.EXTERNAL);
+        })
+        .get("/", ctx -> {
+            try { serverHtml(ctx, "./public/index.html"); }
+            catch (IOException e) { System.out.println(e.getMessage()); }
+        })
+        .get("/clicked", ctx -> ctx.html("<p>Yo, ya Clicked ME!!!!!</p>"))
+        .start(8000);
+    }
+
+    private static void serverHtml(
+            @NotNull Context ctx,
+            @NotNull String filePath
+    ) throws IOException {
+        ctx.html(new String(
+                new FileInputStream(filePath).readAllBytes(),
+                StandardCharsets.UTF_8)
+        );
+    }
+}
