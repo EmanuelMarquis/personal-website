@@ -1,0 +1,29 @@
+:root {
+    --primary-color: #1c1b1f;
+    --secondary-color: #FCF8FF;
+    --accent-color: #4929EB;
+
+    color: var(--primary-color);
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+.bento-box {
+    display: flex;
+}
+
+.bento-box .box {
+    background-color: var(--secondary-color);
+}
+
+.bento-box .box-projects {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+.inside-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
