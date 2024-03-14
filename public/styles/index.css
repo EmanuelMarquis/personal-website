@@ -1,29 +1,60 @@
+@import "fonts.css";
+
 :root {
     --primary-color: #1c1b1f;
     --secondary-color: #FCF8FF;
     --accent-color: #4929EB;
 
+    --bento-box-lr-margin: 4rem;
+    --bento-box-tb-margin: 1.2rem;
+
+    --gap: 1rem;
+
     color: var(--primary-color);
+    font-size: 24px;
 }
+
+html, body {height: 100%;}
+
+p, h2 {margin: 0;}
 
 body {
     background-color: var(--primary-color);
+    margin: 0;
+    display: flex;
 }
 
 .bento-box {
+    margin: var(--bento-box-tb-margin) 
+            var(--bento-box-lr-margin) 
+            var(--bento-box-tb-margin) 
+            var(--bento-box-lr-margin);
     display: flex;
+    flex: 1;
+    gap: var(--gap);
+    justify-content: stretch;
+    
 }
 
 .bento-box .box {
     background-color: var(--secondary-color);
+    border-radius: 16px;
+    flex-grow: 0.5;
+    padding-left: 1.35rem;
+    padding-top: 1rem;
 }
 
 .bento-box .box-projects {
     background-color: var(--accent-color);
     color: var(--secondary-color);
+    border-radius: 16px;
+    padding-left: 1.35rem;
+    padding-top: 1rem;
 }
 
 .inside-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+    flex-grow: 1;
 }
