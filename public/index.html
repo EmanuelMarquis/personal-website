@@ -8,30 +8,13 @@
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-    <div class="bento-box">
-        <section class="box">
-            <p class="inter-regular">My Story</p>
-            <h2 class="poppins-medium">About Me.</h2>
-        </section>
-        <div class="inside-grid">
-            <section class="box-projects ">
-                <p class="inter-regular">My Portfolio</p>
-                <h2 class="poppins-medium">Projects.</h2>
-            </section>
-            <section class="box">
-                <p class="inter-regular">Things I like</p>
-                <h2 class="poppins-medium">Hobbies.</h2>
-            </section>
-            <section class="box">
-                <p class="inter-regular">My Abilities</p>
-                <h2 class="poppins-medium">Skills.</h2>
-            </section>
-            <section class="box">
-                <p class="inter-regular">Let's Connect</p>
-                <h2 class="poppins-medium">Say Hi!</h2>
-            </section>
-        </div>
-    </div>
+    <div class="bento-box" 
+        hx-get="/components" 
+        hx-headers='{"component": "bento-box"}'
+        hx-trigger="load" 
+        hx-target="this"
+        hx-swap="innerHTML"
+    ></div>
     <script src="https://unpkg.com/htmx.org@1.9.10"></script> <!-- HTMX -->
 </body>
 </html>
