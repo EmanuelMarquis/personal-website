@@ -4,6 +4,7 @@ import io.javalin.Javalin;
 import io.javalin.http.Context;
 import io.javalin.http.staticfiles.Location;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -18,7 +19,7 @@ public class Server {
             try { serverHtml(ctx, "./public/index.html"); }
             catch (IOException e) { System.out.println(e.getMessage()); }
         })
-        .get("/clicked", ctx -> ctx.html("<p>Yo, ya Clicked ME!!!!!</p>"))
+        .get("/components", Server::serveComponents)
         .start(8000);
     }
 
@@ -30,5 +31,12 @@ public class Server {
                 new FileInputStream(filePath).readAllBytes(),
                 StandardCharsets.UTF_8)
         );
+    }
+
+    private static void serveComponents(@NotNull Context ctx) {
+        try {
+            if(ctx.header("component").equals("bento-box")) serverHtml(ctx,"./public/components/bento-box.html");
+            else ctx.html("<p>unkown requested component!</p>");
+        } catch (IOException | NullPointerException e) { System.out.println(e.getMessage()); }
     }
 }
