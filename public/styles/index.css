@@ -1,4 +1,5 @@
 @import "fonts.css";
+@import "media-queries.css";
 
 :root {
     --primary-color: #1c1b1f;
@@ -11,7 +12,6 @@
     --gap: 1rem;
 
     color: var(--primary-color);
-    font-size: 24px;
 }
 
 html, body {height: 100%;}
@@ -33,7 +33,6 @@ body {
     flex: 1;
     gap: var(--gap);
     justify-content: stretch;
-    
 }
 
 .bento-box .box,
