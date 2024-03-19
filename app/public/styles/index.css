@@ -1,0 +1,93 @@
+@import "fonts.css";
+@import "media-queries.css";
+
+:root {
+    --primary-color: #1c1b1f;
+    --secondary-color: #FCF8FF;
+    --accent-color: #4929EB;
+
+    --bento-box-lr-margin: 4rem;
+    --bento-box-tb-margin: 1.2rem;
+
+    --gap: 1rem;
+
+    color: var(--primary-color);
+}
+
+html, body {height: 100%;}
+
+p, h2 {margin: 0;}
+
+body {
+    background-color: var(--primary-color);
+    margin: 0;
+    display: flex;
+}
+
+.bento-box {
+    margin: var(--bento-box-tb-margin) 
+            var(--bento-box-lr-margin) 
+            var(--bento-box-tb-margin) 
+            var(--bento-box-lr-margin);
+    display: flex;
+    flex: 1;
+    gap: var(--gap);
+    justify-content: stretch;
+}
+
+.bento-box .box,
+.bento-box .box-projects {
+    border-radius: 16px;
+    padding-left: 1.35rem;
+    padding-top: 1rem;
+    display: grid;
+    cursor: pointer !important
+}
+
+.bento-box .box {
+    background-color: var(--secondary-color);
+    flex-grow: 0.5;
+}
+
+.bento-box .box-projects {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+.bento-box .box-about-me {
+    background-color: var(--secondary-color);
+    border-radius: 16px;
+    cursor: pointer !important;
+    display: grid;
+    grid-auto-columns: min-content;
+    grid-auto-rows: min-content;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.66rem;
+}
+
+.bento-box .box-about-me .about-me-inside-grid {
+    padding-left: 1.35rem;
+    display: inherit;
+}
+
+.box img, 
+.box-projects img,
+.about-me-inside-grid img {
+    justify-self: end;
+    align-self: self-end;
+    margin: 0 1.30rem 1.30rem 0;
+}
+
+#pic {
+    justify-self: start;
+    align-self: self-start;
+    margin: 0;
+    clip-path: xywh(0 0 100% 100% round 16px 16px 0 0);
+}
+
+.inside-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+    flex-grow: 1;
+}
