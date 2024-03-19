@@ -8,6 +8,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+    id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
 repositories {
@@ -19,10 +20,32 @@ dependencies {
     // Use JUnit test framework.
     testImplementation(libs.junit)
 
-    // This dependency is used by the application.
     implementation(libs.guava)
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.23")
+    implementation("org.slf4j:slf4j-api:2.0.10")
 
     implementation("io.javalin:javalin:6.1.2")
+    implementation("jakarta.servlet:jakarta.servlet-api:6.0.0")
+    // Jetty
+    implementation("org.eclipse.jetty:jetty-server:11.0.20")
+    implementation("org.eclipse.jetty:jetty-http:11.0.20")
+    implementation("org.eclipse.jetty:jetty-io:11.0.20")
+    implementation("org.eclipse.jetty.toolchain:jetty-jakarta-servlet-api:5.0.2")
+    implementation("org.eclipse.jetty:jetty-util:11.0.20")
+
+    implementation("org.eclipse.jetty.websocket:websocket-jetty-server:11.0.20")
+    implementation("org.eclipse.jetty:jetty-servlet:11.0.20")
+    implementation("org.eclipse.jetty:jetty-webapp:11.0.20")
+    implementation("org.eclipse.jetty:jetty-xml:11.0.20")
+    implementation("org.eclipse.jetty.websocket:websocket-jetty-api:11.0.20")
+    implementation("org.eclipse.jetty.websocket:websocket-jetty-common:11.0.20")
+    implementation("org.eclipse.jetty.websocket:websocket-core-common:11.0.20")
+
+    implementation("org.eclipse.jetty:jetty-security:11.0.20")
+    implementation("org.eclipse.jetty.websocket:websocket-servlet:11.0.20")
+    implementation("org.eclipse.jetty.websocket:websocket-core-server:11.0.20")
+
+
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -34,5 +57,21 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "org.example.App"
+    mainClass = "dev.emanuelmarquis.Server"
+}
+
+tasks.withType<Jar> {
+    manifest {
+        attributes["Main-Class"] = "dev.emanuelmarquis.Server"
+    }
+}
+tasks.shadowJar {
+    mergeServiceFiles()
+    project.configurations.forEach { config ->
+        if(config.name.equals("implementation")) {
+            config.dependencies.forEach { dep -> dependencies { include(dependency(dep)) }}
+        }
+    }
+
+    archiveFileName = "server.jar"
 }
