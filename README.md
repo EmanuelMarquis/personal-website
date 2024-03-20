@@ -1,2 +1,2 @@
 ## Personal website
-https://emanuelmarquis.netlify.app
+https://uelquis.dev
