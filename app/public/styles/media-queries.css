@@ -1,0 +1,178 @@
+/*  TODO: implement styling for mobile [ portrait and landscape mode ] 
+    obs: tablets and phones gonna have same media query
+*/
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    :root {font-size: 14px;}
+
+    .bento-box {
+        box-sizing: border-box;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: var(--gap);
+        justify-content: stretch;
+    }
+
+    .bento-box .box-about-me {
+        background-color: var(--secondary-color);
+        border-radius: 16px;
+        cursor: pointer !important;
+        gap: 0.66rem;
+        position: relative;
+    }
+    
+    #pic {
+        width: 100%;
+        height: 100%;
+        justify-self: start;
+        align-self: self-start;
+        margin: 0;
+        clip-path: xywh(0 0 100% 100% round 16px);
+    }
+
+    .box img, 
+    .box-projects img,
+    .about-me-inside-grid img {
+        width: 32px;
+        height: 32px;
+        justify-self: end;
+        align-self: self-end;
+        margin: 0 1.30rem 1.30rem 0;
+    }
+
+    .about-me-inside-grid img {content: url("../res/btn2.svg");}
+    
+    .about-me-inside-grid p {
+        display: none;
+    }
+
+    .about-me-inside-grid h2 {
+        margin-top: 1rem;
+        margin-left: 1.35rem;
+        font-weight: 600;
+    }
+
+    .about-me-inside-grid {
+        z-index: 1;
+        display: grid;
+        position: absolute;
+        top: 0; 
+        left: 0;
+        color: var(--secondary-color);
+        font-size: 1.6rem;
+        width: 100%;
+        height: 100%;
+        overflow: clip;
+    }
+}
+
+@media screen and (max-device-width: 768px) and (orientation: landscape) {
+    :root {font-size: 14px;}
+
+    .bento-box {
+        box-sizing: border-box;
+        margin: 1rem;
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        gap: var(--gap);
+        justify-content: stretch;
+    }
+
+    .bento-box .box-about-me {
+        background-color: var(--secondary-color);
+        border-radius: 16px;
+        cursor: pointer !important;
+        gap: 0.66rem;
+        position: relative;
+    }
+    
+    #pic {
+        width: 100%;
+        height: 100%;
+        justify-self: start;
+        align-self: self-start;
+        margin: 0;
+        clip-path: xywh(0 0 100% 100% round 16px);
+    }
+
+    .box img, 
+    .box-projects img,
+    .about-me-inside-grid img {
+        width: 32px;
+        height: 32px;
+        justify-self: end;
+        align-self: self-end;
+        margin: 0 1.30rem 1.30rem 0;
+    }
+
+    .about-me-inside-grid img {content: url("../res/btn2.svg");}
+    
+    .about-me-inside-grid p {
+        display: none;
+    }
+
+    .about-me-inside-grid h2 {
+        margin-top: 1rem;
+        margin-left: 1.35rem;
+        font-weight: 600;
+    }
+
+    .about-me-inside-grid {
+        z-index: 1;
+        display: grid;
+        position: absolute;
+        top: 0; 
+        left: 0;
+        color: var(--secondary-color);
+        font-size: 1.6rem;
+        width: 100%;
+        height: 100%;
+        overflow: clip;
+    }
+}
+
+@media screen and (min-device-width: 769px) {
+    :root {font-size: 24px;}
+
+    .bento-box {
+        margin: 1.2rem 4rem 1.2rem 4rem ;
+        display: flex;
+        flex: 1;
+        gap: var(--gap);
+        justify-content: stretch;
+    }
+
+    .bento-box .box-about-me {
+        background-color: var(--secondary-color);
+        border-radius: 16px;
+        cursor: pointer !important;
+        display: grid;
+        grid-auto-columns: min-content;
+        grid-auto-rows: min-content;
+        grid-template-rows: 1fr 1fr;
+        gap: 0.66rem;
+    }
+
+    #pic {
+        justify-self: start;
+        align-self: self-start;
+        margin: 0;
+        clip-path: xywh(0 0 100% 100% round 16px 16px 0 0);
+    }
+
+    .box img, 
+    .box-projects img,
+    .about-me-inside-grid img {
+        justify-self: end;
+        align-self: self-end;
+        margin: 0 1.30rem 1.30rem 0;
+    }
+
+    .bento-box .box-about-me .about-me-inside-grid {
+        padding-left: 1.35rem;
+        display: inherit;
+    }
+}
